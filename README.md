@@ -6,5 +6,5 @@ npm install
 
 Start app
 
-react-native start
+npx react-native start
 react-native run-android
