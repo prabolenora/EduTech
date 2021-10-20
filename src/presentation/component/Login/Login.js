@@ -110,7 +110,7 @@ export default class Login extends Component {
         this.userService.signUpUser(userDto);
   
       } else {
-        alert("Password and confirm password is not match");
+        alert("Password and confirm password do not match");
       }
 
 
