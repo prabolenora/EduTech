@@ -1,3 +1,10 @@
 # EduTech
+## ESAD 05 mobile app
 
-to install the node modules enter the following command.
+To install the node modules enter the following commands.
+npm install
+
+Start app
+
+react-native start
+react-native run-android
