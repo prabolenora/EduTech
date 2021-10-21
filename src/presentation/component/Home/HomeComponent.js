@@ -1,7 +1,7 @@
 import React, { Component, useContext } from 'react';
 import { Button, Text, View, Icon, TouchableOpacity } from 'react-native';
 import { LoginContext } from '../../../Utils/LoginProvider';
-import styles from './Payment.component.style';
+import styles from './Home.component.style';
 
 const HomeComponent = props => {
   const { user } = useContext(LoginContext);
@@ -80,7 +80,7 @@ const HomeComponent = props => {
           <Text style={styles.buttontext}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Timetables')}
           activeOpacity={0.5}>
           {/* <MaterialCommunityIcons
             name="clipboard-flow-outline"
@@ -90,13 +90,13 @@ const HomeComponent = props => {
           <Text style={styles.buttontext}> Timetables</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Trips')}
           activeOpacity={0.5}>
           {/* <MaterialIcons name="add-circle" size={55} color="#3bdefb" /> */}
           <Text style={styles.buttontext}> Trips</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Payments')}
           activeOpacity={0.5}>
           {/* <Ionicons name="cash-outline" size={24} color="#00509d" /> */}
           <Text style={styles.buttontext}> Payments</Text>
