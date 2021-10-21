@@ -80,7 +80,7 @@ const HomeComponent = props => {
           <Text style={styles.buttontext}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Timetables')}
+          onPress={() => navigation.navigate('Home')}
           activeOpacity={0.5}>
           {/* <MaterialCommunityIcons
             name="clipboard-flow-outline"
@@ -90,13 +90,13 @@ const HomeComponent = props => {
           <Text style={styles.buttontext}> Timetables</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Trips')}
+          onPress={() => navigation.navigate('Home')}
           activeOpacity={0.5}>
           {/* <MaterialIcons name="add-circle" size={55} color="#3bdefb" /> */}
           <Text style={styles.buttontext}> Trips</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Payments')}
+          onPress={() => navigation.navigate('Home')}
           activeOpacity={0.5}>
           {/* <Ionicons name="cash-outline" size={24} color="#00509d" /> */}
           <Text style={styles.buttontext}> Payments</Text>
