@@ -18,8 +18,10 @@ export default UserDrawerList = () => {
       initialRouteName="home">
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Profile" component={Profile} />   
-        <Drawer.Screen name="Chat" component={Chat} />          
-    
+        <Drawer.Screen name="Spport" component={Chat} />  
+        <Drawer.Screen name="About us" component={Chat} />          
+        
+
       </Drawer.Navigator>
       // <Drawer.Navigator 
       // drawerContent={props => {<DrawerContent {...props}/>}}

@@ -30,7 +30,7 @@ export default function AppStack() {
         ) : (
           <Stack.Screen
             name="EduTec"
-            options={{headerTitleAlign: 'center'}}
+            options={{headerShown: false}}
             component={Login}
           />
         )}

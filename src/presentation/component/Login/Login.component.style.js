@@ -12,8 +12,8 @@ export default StyleSheet.create({
     width: 200,
     height: 200,
     alignSelf: 'center',
-    marginBottom: 15,
-    marginTop: 10
+    marginBottom: 5,
+    marginTop: 15,
   },
   BottomView: {
     width: '100%',
@@ -28,8 +28,8 @@ export default StyleSheet.create({
     fontSize: 36,
     fontWeight: 'bold',
     marginLeft: 30,
-    marginTop: 50,
-    marginBottom: 10,
+    marginTop: 5,
+    marginBottom: 5,
     alignSelf: 'center',
   },
   FormView: {
@@ -37,7 +37,7 @@ export default StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '30',
+    marginTop: 5,
   },
 
   TextInput: {
@@ -46,7 +46,7 @@ export default StyleSheet.create({
     borderRadius: 10,
     paddingLeft: 5,
     borderWidth: 1,
-    marginTop: 10,
+    marginTop: 5,
     fontWeight: 'bold',
     borderColor: '#fff',
     color: '#fff',

@@ -19,7 +19,7 @@ const LoginComponent = (props) => {
         style={styles.Image}
       />
 
-      {/* <Text style={styles.Heading}>Welcome{'\n'} </Text>- */}
+      <Text style={styles.Heading}>Smart SL{'\n'} </Text>
       <TextInput style={styles.TextInput}
         placeholder="Email"
         placeholderTextColor={'#fff'}
@@ -31,7 +31,6 @@ const LoginComponent = (props) => {
       <TextInput style={styles.TextInput}
         placeholder="Password"
         placeholderTextColor={'#fff'}
-
         onChangeText={props.setPassword}
         value={props.password}
         secureTextEntry={true}
