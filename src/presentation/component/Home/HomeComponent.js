@@ -3,8 +3,7 @@ import { Button, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LoginContext } from '../../../Utils/LoginProvider';
 import styles from './Home.component.style';
 import Payment from '../Payment/Payment';
-import { Drawer } from 'react-native-paper';
-// Import vector icons
+import { Drawer, Card, Title, Paragraph } from 'react-native-paper';
 
 const HomeComponent = props => {
   const { user } = useContext(LoginContext);
@@ -12,42 +11,71 @@ const HomeComponent = props => {
   return (
     <View>
       <View style={styles.card}>
-        <Button onPress={() => props.signOut()} title="Log Out" />
-
-
+        <View >
+          <Button onPress={() => props.signOut()} title="Log Out" />
+        </View>
         <View style={styles.cardBottom}>
-          <View>
+          <View><Card.Content >
+            <Title>Credit Balance</Title>
+            <Paragraph>2650.00 LKR</Paragraph>
+          </Card.Content>
             <View style={styles.cardBottomSame}>
-              {/* <Feather name="arrow-down" size={18} color="green" /> */}
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => props.navigation.navigate('Payment')}>
+                <Text h3
+                  style={styles.topup2}>
+                  Top Up
+                </Text>
+              </TouchableOpacity>
               <Image
-                source={require('./card.png')}
+                source={require('./../../../assets/card.png')}
                 style={styles.Image}
               />
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => Drawer.navigate('Home')}>
                 {/* <FontAwesome5 name="home" size={24} color="#00509d" /> */}
-                <Text h3
-                  style={{
-                    marginTop: 150,
-                    color: 'white'
-                  }}>
-                  Top Up
-                </Text>
+
               </TouchableOpacity>
             </View>
             <Text h4 style={{ textAlign: 'center' }}>
-              {/* {`Rs. ${income?.toFixed(2)}`} */}
             </Text>
+          </View>
+        </View>
+        <View style={styles.cardBottom2}>
+          <View>
+            <View style={styles.cardBottomSame}>
+            </View>
+            <View style={styles.cardBottomSame}>
+            </View>
+          </View>
+        </View>
+        <Text h2>
+          Recent Tours
+        </Text>
+        <View style={styles.cardBottom}>
+          <View>
+            <View style={styles.cardBottomSame}>
+              {/* <Feather name="arrow-up" size={18} color="red" /> */}
+
+            </View>
+            <View style={styles.cardBottomSame}>
+              {/* <Feather name="arrow-up" size={18} color="red" /> */}
+
+            </View>
+
           </View>
         </View>
         <View style={styles.cardBottom}>
           <View>
             <View style={styles.cardBottomSame}>
               {/* <Feather name="arrow-up" size={18} color="red" /> */}
-              <Text style={{ textAlign: 'center', marginLeft: 5 }}>
-                Expense
-              </Text>
+
+            </View>
+            <View style={styles.cardBottomSame}>
+              {/* <Feather name="arrow-up" size={18} color="red" /> */}
+
             </View>
             <Text h4 style={{ textAlign: 'center' }}>
               {/* {`Rs. ${expense?.toFixed(2)}`} */}
@@ -55,26 +83,10 @@ const HomeComponent = props => {
           </View>
         </View>
       </View>
+      <View style={styles.cardBottom}>
 
-      <View style={styles.recentTitle}>
-        <Text h4 style={{ color: 'black' }}>
-          Recent Tours
-        </Text>
       </View>
-      <View style={styles.recentTransactions}>
-        <Text h4 style={{ color: 'black' }}>
-          Promos
-        </Text>
-        {/* {filter?.slice(0, 3).map((info) => ( */}
-        {/* <View key={info.id}>
-                <CustomListItem
-                  info={info.data}
-                  navigation={navigation}
-                  id={info.id}
-                />
-              </View>
-            ))} */}
-      </View>
+
 
       <View style={styles.addButton}>
         <TouchableOpacity

@@ -4,7 +4,7 @@ import HomeComponent from './HomeComponent';
 import styles from './Home.component.style';
 import FirebaseUtil from '../../../Utils/FirebaseUtil';
 
-export default class Home extends Component{ 
+function Home({navigation}) { 
 
     signOut = () => {
         FirebaseUtil.signOut().catch((e) => {
@@ -13,14 +13,17 @@ export default class Home extends Component{
         });
     }
 
-    render() {
+
         return (
             <View style = {styles.container}>
                 <HomeComponent  
                 signOut = {this.signOut}
+                navigation={navigation}
                 />
+
             </View>
         );
-    }
+    
 
 }
+export default Home;
