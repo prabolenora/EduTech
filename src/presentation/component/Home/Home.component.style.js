@@ -35,8 +35,8 @@ export default StyleSheet.create({
 
   },
   Image: {
-    width: 150,
-    height: 100,
+    width: '30%',
+    height: '200%',
     marginBottom: 5,
     marginTop: 5,
   },
@@ -84,9 +84,9 @@ export default StyleSheet.create({
     
   },
   topup2:{
-    marginTop: 10,
+    marginTop: 20,
     color: 'white',
-    marginRight:150,
+    marginLeft:10,
     fontSize:20,
     fontWeight:"bold",
     

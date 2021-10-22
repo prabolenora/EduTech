@@ -32,12 +32,7 @@ const HomeComponent = props => {
                 source={require('./../../../assets/card.png')}
                 style={styles.Image}
               />
-              <TouchableOpacity
-                activeOpacity={0.5}
-                onPress={() => Drawer.navigate('Home')}>
-                {/* <FontAwesome5 name="home" size={24} color="#00509d" /> */}
-
-              </TouchableOpacity>
+             
             </View>
             <Text h4 style={{ textAlign: 'center' }}>
             </Text>

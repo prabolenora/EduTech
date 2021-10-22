@@ -8,8 +8,9 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   container: {
-    backgroundColor: "#F5F5F5",
-    marginTop: 60,
+    backgroundColor: "white",
+    marginTop: 5,
+    height:'100%'
   },
   label: {
     color: "black",
