@@ -17,7 +17,7 @@ const LoginComponent = (props) => {
       <Image
         source={require('./logo.png')}
         style={styles.Image}
-      />
+      />  
 
       <Text style={styles.Heading}>Smart SL{'\n'} </Text>
       <TextInput style={styles.TextInput}

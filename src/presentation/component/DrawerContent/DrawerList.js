@@ -5,6 +5,8 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../Home/Home';
 import { DrawerContent } from './DrawerContent';
 import Profile from '../profile/Profile';
+import Payment from '../Payment/Payment';
+
 import Chat from '../chat/Chat';
 
 const Drawer = createDrawerNavigator();
@@ -18,7 +20,7 @@ export default UserDrawerList = () => {
       initialRouteName="home">
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Profile" component={Profile} />   
-        <Drawer.Screen name="Spport" component={Chat} />  
+        <Drawer.Screen name="Payment" component={Payment} />  
         <Drawer.Screen name="About us" component={Chat} />          
         
 

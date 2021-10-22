@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    width:'100%',
+    width: '100%',
     height: '100%',
     flex: 1,
     justifyContent: 'center',
@@ -15,12 +15,11 @@ export default StyleSheet.create({
     width: '100%',
   },
   card: {
-    backgroundColor: '#3490dc',
+    backgroundColor: '#ffff',
     alignItems: 'center',
     width: '100%',
-    height: '100%',
+    height: '95%',
     padding: 10,
-    borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.23,
@@ -29,8 +28,16 @@ export default StyleSheet.create({
     marginVertical: 20,
   },
   cardTop: {
-    backgroundColor: 'blue',
+    backgroundColor: '#bbdefb',
     marginBottom: 20,
+    borderRadius: 5,
+
+  },
+  Image: {
+    width: 100,
+    height: 100,
+    marginBottom: 5,
+    marginTop: 15,
   },
   cardBottom: {
     flexDirection: 'column',
@@ -51,7 +58,7 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: '#bbdefb',
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
@@ -95,6 +102,6 @@ export default StyleSheet.create({
   },
   buttontext: {
     color: 'grey',
-      fontSize: 10,
+    fontSize: 10,
   }
 });
