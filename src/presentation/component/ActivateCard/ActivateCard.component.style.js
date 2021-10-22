@@ -19,9 +19,6 @@ export default StyleSheet.create({
     fontSize: 16,
     color: "black",
   },
-<<<<<<< HEAD:src/presentation/component/Payment/Payment.component.style.js
-  
-=======
   Image: {
     width: 250,
     height: 250,
@@ -43,5 +40,4 @@ export default StyleSheet.create({
   second: {
     paddingLeft: 35,
   },
->>>>>>> b05e08fbf96258cb86edc6c74f71e9355e29a27c:src/presentation/component/ActivateCard/ActivateCard.component.style.js
 });

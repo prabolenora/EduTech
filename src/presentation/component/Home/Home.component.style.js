@@ -15,10 +15,10 @@ export default StyleSheet.create({
     width: '100%',
   },
   card: {
-    backgroundColor: '#3490dc',
+    backgroundColor: 'white',
     alignItems: 'center',
     width: '100%',
-    height: '100%',
+    height: '96%',
     padding: 10,
     borderRadius: 10,
     shadowColor: '#000',
@@ -62,8 +62,7 @@ export default StyleSheet.create({
     width: '100%',
     margin: 'auto',
     marginBottom: 15,
-    backgroundColor: '#ffff',
-
+    backgroundColor: '#ffff', 
     borderRadius: 5,
   },
   recentTitle: {

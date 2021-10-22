@@ -1,5 +1,5 @@
 import React, { Component, useContext } from 'react';
-import { Button, Text, View, Icon, TouchableOpacity } from 'react-native';
+import { Button, Text, View, Icon, TouchableOpacity,Image } from 'react-native';
 import { LoginContext } from '../../../Utils/LoginProvider';
 import styles from './Home.component.style';
 import Payment from '../Payment/Payment';
@@ -12,9 +12,8 @@ const HomeComponent = props => {
     <View>
 
       <View style={styles.card}>
-        <View >
-          <Button onPress={() => props.signOut()} title="Log Out" />
-        </View>
+      <Button onPress={() => props.signOut()} title="Log Out" />
+
         <View style={styles.cardBottom}>
           <View><Card.Content >
             <Title>Credit Balance</Title>
