@@ -7,6 +7,7 @@ import { DrawerContent } from './DrawerContent';
 import Profile from '../profile/Profile';
 import ActivateCard from '../ActivateCard/ActivateCard';
 import Payment from '../Payment/Payment';
+import Timetable from '../TimeTable/TimeTable';
 
 import Chat from '../chat/Chat';
 
@@ -23,7 +24,8 @@ export default UserDrawerList = () => {
         <Drawer.Screen name="Activate Card" component={ActivateCard} />  
         <Drawer.Screen name="Profile" component={Profile} />   
         <Drawer.Screen name="Payment" component={Payment} />  
-        <Drawer.Screen name="About us" component={Chat} />   
+        <Drawer.Screen name="About us" component={Chat} />  
+        <Drawer.Screen name="Timetable" component={Timetable} /> 
 
         
 

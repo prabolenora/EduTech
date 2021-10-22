@@ -17,8 +17,8 @@ const ActivateCardComponent = (props) => {
       </View>
       <Text style={styles.first}>Enter your smart card number{'\n'} </Text>
       <Text style={styles.second}>Your account will be linked to this number{'\n'} </Text>
-      <TextInput placeholder="Phone number" onChange={props.setPhoneNumber} />
-      <Button title="ACTIVATE" onPress={props.activateCard} />
+      <TextInput placeholder="Phone number" style={styles.text_number} onChange={props.setPhoneNumber} />
+      <Button title="ACTIVATE"  onPress={props.activateCard} />
     </View>
 
   );

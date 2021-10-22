@@ -40,8 +40,8 @@ export default StyleSheet.create({
   second: {
     paddingLeft: 35,
   },
-  text_number:{
-    textAlignVertical: 'top',
-    textAlign:"center"
+  outer_view:{
+    paddingTop: 0,
+    height:100,
   }
 });
