@@ -1,5 +1,5 @@
 import React, { Component, useContext } from 'react';
-import { Button, Text, View, Image, TouchableOpacity } from 'react-native';
+import { Button, Text, View, Icon, TouchableOpacity } from 'react-native';
 import { LoginContext } from '../../../Utils/LoginProvider';
 import styles from './Home.component.style';
 import Payment from '../Payment/Payment';
@@ -10,6 +10,7 @@ const HomeComponent = props => {
 
   return (
     <View>
+
       <View style={styles.card}>
         <View >
           <Button onPress={() => props.signOut()} title="Log Out" />
@@ -106,13 +107,13 @@ const HomeComponent = props => {
           <Text style={styles.buttontext}> Timetables</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => Drawer.navigate('Trips')}
+          onPress={() => navigation.navigate('Trips')}
           activeOpacity={0.5}>
           {/* <MaterialIcons name="add-circle" size={55} color="#3bdefb" /> */}
           <Text style={styles.buttontext}> Trips</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => { Payment }}
+          onPress={() => navigation.navigate('Payments')}
           activeOpacity={0.5}>
           {/* <Ionicons name="cash-outline" size={24} color="#00509d" /> */}
           <Text style={styles.buttontext}> Payments</Text>
