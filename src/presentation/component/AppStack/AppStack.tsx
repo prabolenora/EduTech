@@ -6,6 +6,7 @@ import {LoginContext} from '../../../Utils/LoginProvider';
 import LoadingScreen from '../Common/LoadingScreen';
 import Login from '../Login/Login';
 import DrawerList from '../DrawerContent/DrawerList';
+import Payment from '../Payment/Payment';
 
 const Stack = createStackNavigator();
 
@@ -22,19 +23,27 @@ export default function AppStack() {
             component={LoadingScreen}
           />
         ) : user ? (
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="UserDrawerList"
-            component={DrawerList}
-          />
+          <><Stack.Screen
+              options={{ headerShown: false }}
+              name="UserDrawerList"
+              component={DrawerList} />
+              <Stack.Screen
+                name="Payment"
+                options={{ headerShown: true }}
+                component={Payment} /></>
+              
         ) : (
           <Stack.Screen
             name="EduTec"
             options={{headerShown: false}}
             component={Login}
           />
+          
         )}
+       
+
       </Stack.Navigator>
+     
     </NavigationContainer>
   );
 }

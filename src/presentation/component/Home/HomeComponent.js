@@ -1,7 +1,9 @@
 import React, { Component, useContext } from 'react';
-import { Button, Text, View, Icon, TouchableOpacity } from 'react-native';
+import { Button, Text, View, Icon, TouchableOpacity, Image } from 'react-native';
 import { LoginContext } from '../../../Utils/LoginProvider';
 import styles from './Home.component.style';
+import Payment from '../Payment/Payment';
+import { Drawer, Card, Title, Paragraph } from 'react-native-paper';
 
 const HomeComponent = props => {
   const { user } = useContext(LoginContext);
@@ -10,40 +12,70 @@ const HomeComponent = props => {
     <View>
 
       <View style={styles.card}>
-        <Text>Home: {user?.email}</Text>
         <Button onPress={() => props.signOut()} title="Log Out" />
-        <View style={styles.cardTop}>
 
-          <Text style={{ textAlign: 'center', color: 'aliceblue' }}>
-            Card Payments
-          </Text>
-          <Text h3 style={{ textAlign: 'center', color: 'aliceblue' }}>
-          </Text>
+        <View style={styles.cardBottom}>
+          <View><Card.Content >
+            <Title>Credit Balance</Title>
+            <Paragraph>2650.00 LKR</Paragraph>
+          </Card.Content>
+            <View style={styles.cardBottomSame}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => props.navigation.navigate('Payment')}>
+                <Text h3
+                  style={styles.topup2}>
+                  Top Up
+                </Text>
+              </TouchableOpacity>
+              <Image
+                source={require('./../../../assets/card.png')}
+                style={styles.Image}
+              />
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => Drawer.navigate('Home')}>
+                {/* <FontAwesome5 name="home" size={24} color="#00509d" /> */}
+
+              </TouchableOpacity>
+            </View>
+            <Text h4 style={{ textAlign: 'center' }}>
+            </Text>
+          </View>
         </View>
+        <View style={styles.cardBottom2}>
+          <View>
+            <View style={styles.cardBottomSame}>
+            </View>
+            <View style={styles.cardBottomSame}>
+            </View>
+          </View>
+        </View>
+        <Text h2>
+          Recent Tours
+        </Text>
         <View style={styles.cardBottom}>
           <View>
             <View style={styles.cardBottomSame}>
-              {/* <Feather name="arrow-down" size={18} color="green" /> */}
-              <Text
-                style={{
-                  textAlign: 'center',
-                  marginLeft: 5,
-                }}>
-                Income
-              </Text>
+              {/* <Feather name="arrow-up" size={18} color="red" /> */}
+
             </View>
-            <Text h4 style={{ textAlign: 'center' }}>
-              {/* {`Rs. ${income?.toFixed(2)}`} */}
-            </Text>
+            <View style={styles.cardBottomSame}>
+              {/* <Feather name="arrow-up" size={18} color="red" /> */}
+
+            </View>
+
           </View>
         </View>
         <View style={styles.cardBottom}>
           <View>
             <View style={styles.cardBottomSame}>
               {/* <Feather name="arrow-up" size={18} color="red" /> */}
-              <Text style={{ textAlign: 'center', marginLeft: 5 }}>
-                Expense
-              </Text>
+
+            </View>
+            <View style={styles.cardBottomSame}>
+              {/* <Feather name="arrow-up" size={18} color="red" /> */}
+
             </View>
             <Text h4 style={{ textAlign: 'center' }}>
               {/* {`Rs. ${expense?.toFixed(2)}`} */}
@@ -51,26 +83,10 @@ const HomeComponent = props => {
           </View>
         </View>
       </View>
+      <View style={styles.cardBottom}>
 
-      <View style={styles.recentTitle}>
-        <Text h4 style={{ color: 'black' }}>
-          Recent Tours
-        </Text>
       </View>
-      <View style={styles.recentTransactions}>
-        <Text h4 style={{ color: 'black' }}>
-          Promos
-        </Text>
-        {/* {filter?.slice(0, 3).map((info) => ( */}
-        {/* <View key={info.id}>
-                <CustomListItem
-                  info={info.data}
-                  navigation={navigation}
-                  id={info.id}
-                />
-              </View>
-            ))} */}
-      </View>
+
 
       <View style={styles.addButton}>
         <TouchableOpacity

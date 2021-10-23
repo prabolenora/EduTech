@@ -15,7 +15,7 @@ const LoginComponent = (props) => {
 
     <View style={styles.BottomView}>
       <Image
-        source={require('./logo.png')}
+        source={require('./../../../assets/logo.png')}
         style={styles.Image}
       />
 
@@ -71,8 +71,7 @@ const LoginComponent = (props) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={styles.TextButton}
-            onPress={() => navigation.navigate('Register')}>
+            style={styles.TextButton}>
             <Text style={styles.SignupText} onPress={() => props.setCreate(false)}> Back to Sign in</Text>
           </TouchableOpacity>
         </>
@@ -85,7 +84,7 @@ const LoginComponent = (props) => {
 
           <TouchableOpacity
             style={styles.TextButton}
-            onPress={() => navigation.navigate('Register')}>
+          >
             <Text style={styles.SignupText} onPress={() => props.setCreate(true)}>Create an Account</Text>
           </TouchableOpacity>
         </>

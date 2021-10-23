@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Switch } from "react-native";
+import { white } from "react-native-paper/lib/typescript/styles/colors";
+
 
 export default StyleSheet.create({
   Switch: {
@@ -9,7 +10,7 @@ export default StyleSheet.create({
   },
   container: {
     backgroundColor: "#F5F5F5",
-    marginTop: 60,
+    marginTop: 10,
   },
   label: {
     color: "black",
@@ -20,17 +21,13 @@ export default StyleSheet.create({
     color: "black",
   },
   Image: {
-    width: 250,
-    height: 250,
-    marginBottom: 5,
-    marginTop: 15,
+    width: 100,
+    height: 100,
+   
     alignItems: "center",
-    paddingLeft: 50,
+    paddingLeft: 10,
   },
-  image_view: {
-    paddingLeft: 50,
-    paddingTop: 0
-  },
+
   first: {
     paddingLeft: 35,
     paddingTop: 20,
@@ -41,7 +38,26 @@ export default StyleSheet.create({
     paddingLeft: 35,
   },
   outer_view:{
-    paddingTop: 0,
-    height:100,
-  }
+    height:'100%',
+    width:'100%',
+    backgroundColor:'red',
+    
+  },
+  dateTimeButton : {
+    paddingTop:10,
+  },
+  outerView:{
+    padding:10,
+  },
+  timetable_container:{  
+    flexDirection: 'row',
+    paddingTop:20 ,// set elements horizontally, try column.  
+    backgroundColor: 'white' ,
+    marginBottom:10 ,
+},  
+// timetable_card:{  
+//   width: 100,  
+//   height: 80,  
+//  // backgroundColor: 'powderblue',  
+// },  
 });

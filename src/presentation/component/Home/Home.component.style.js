@@ -15,10 +15,10 @@ export default StyleSheet.create({
     width: '100%',
   },
   card: {
-    backgroundColor: '#3490dc',
+    backgroundColor: 'white',
     alignItems: 'center',
     width: '100%',
-    height: '100%',
+    height: '96%',
     padding: 10,
     borderRadius: 10,
     shadowColor: '#000',
@@ -31,13 +31,22 @@ export default StyleSheet.create({
   cardTop: {
     backgroundColor: 'blue',
     marginBottom: 20,
+    borderRadius: 5,
+
+  },
+  Image: {
+    width: 150,
+    height: 100,
+    marginBottom: 5,
+    marginTop: 5,
   },
   cardBottom: {
     flexDirection: 'column',
     justifyContent: 'center',
-    width: '50%',
+    width: '100%',
     margin: 'auto',
     marginBottom: 20,
+    marginTop: 20,
     backgroundColor: '#bbdefb',
     borderRadius: 5,
   },
@@ -47,15 +56,50 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
+  cardBottom2: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100%',
+    margin: 'auto',
+    marginBottom: 15,
+    backgroundColor: '#ffff', 
+    borderRadius: 5,
+  },
+  recentTitle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  recentTransactions: {
+    backgroundColor: 'white',
+    width: '100%',
+  },
+  topup:{
+    marginTop: 20,
+    color: 'white',
+    marginRight:150,
+    fontSize:20,
+    fontWeight:"bold",
+    
+  },
+  topup2:{
+    marginTop: 10,
+    color: 'white',
+    marginRight:150,
+    fontSize:20,
+    fontWeight:"bold",
+    
+  },
   addButton: {
     position: 'absolute',
     bottom: 0,
     padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: '#DEDEDE',
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
-    height: '12 %',
+    height: '12%',
 
     alignItems: 'center',
     shadowColor: '#000',
@@ -66,10 +110,10 @@ export default StyleSheet.create({
     shadowOpacity: 0.58,
     shadowRadius: 16.0,
 
-    elevation: 24,
+    elevation: 10,
   },
   recentTransactions: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     width: '100%',
   },
 

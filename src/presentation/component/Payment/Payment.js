@@ -1,10 +1,10 @@
 import React, {Component, useContext} from 'react';
 import { View } from 'react-native';
-import HomeComponent from './HomeComponent';
-import styles from './Home.component.style';
+import PaymentComponent from './PaymentComponent';
+import styles from './Payment.component.style';
 import FirebaseUtil from '../../../Utils/FirebaseUtil';
 
-function Home({navigation}) { 
+export default class Payment extends Component{ 
 
     signOut = () => {
         FirebaseUtil.signOut().catch((e) => {
@@ -12,18 +12,15 @@ function Home({navigation}) {
             alert("Something went wrong");
         });
     }
+   
 
-
+    render() {
         return (
             <View style = {styles.container}>
-                <HomeComponent  
-                signOut = {this.signOut}
-                navigation={navigation}
+                <PaymentComponent  
                 />
-
             </View>
         );
-    
+    }
 
 }
-export default Home;

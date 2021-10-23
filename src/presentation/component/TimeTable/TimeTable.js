@@ -11,12 +11,20 @@ function TimeTable() {
     const TimeTable = () => {
         alert('dsd');
     }
+    const handleConfirm = (date) => {
+        console.warn("A date has been picked: ", date);
+        const [datetime]=date;
+       // var tes=const [datetime];
+        alert(date);
+        hideDatePicker();
+      };
 
     return (
         <View style={styles.container}>
             <TimeTableComponent
                 TimeTable={TimeTable}
                 setPhoneNumber={setPhoneNumber}
+                handleConfirm={handleConfirm}
             />
         </View>
     );
