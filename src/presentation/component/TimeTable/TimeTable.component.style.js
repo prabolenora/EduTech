@@ -53,7 +53,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     paddingTop:20 ,// set elements horizontally, try column.  
     backgroundColor: 'white' ,
-    marginBottom:10 ,
+    marginBottom:10,
 },  
 // timetable_card:{  
 //   width: 100,  
