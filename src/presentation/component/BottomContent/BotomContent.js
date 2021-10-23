@@ -4,6 +4,7 @@ import {StyleSheet, View, Image, Text, Button} from 'react-native';
 import styles from './Bottom.component.style';
 import {LoginContext} from '../../../Utils/LoginProvider';
 import FirebaseUtil from '../../../Utils/FirebaseUtil';
+import { TabActions } from '@react-navigation/routers';
 
 
 
@@ -22,7 +23,7 @@ export function DrawerContent(props) {
                     <Text>{user?.email}</Text>
                 </View>
                 {/* </DrawerItem> */}
-                <DrawerItemList {...props}/>
+                <TabActions {...props}/>
                 <View>
                     <Button onPress={signOut} title="Log Out" />
                 

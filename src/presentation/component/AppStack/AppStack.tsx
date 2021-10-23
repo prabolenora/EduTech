@@ -7,6 +7,7 @@ import LoadingScreen from '../Common/LoadingScreen';
 import Login from '../Login/Login';
 import DrawerList from '../DrawerContent/DrawerList';
 import Payment from '../Payment/Payment';
+import BottomList from '../BottomContent/BottomList';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,10 @@ export default function AppStack() {
               options={{ headerShown: false }}
               name="UserDrawerList"
               component={DrawerList} />
+              <Stack.Screen
+              options={{ headerShown: false }}
+              name="BottomList"
+              component={BottomList} />
               <Stack.Screen
                 name="Payment"
                 options={{ headerShown: true }}

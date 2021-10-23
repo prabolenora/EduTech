@@ -1,35 +1,45 @@
 import 'react-native-gesture-handler';
-import React, {useContext} from 'react';
-import {} from 'react-native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import React, { useContext } from 'react';
+import { } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from '../Home/Home';
 import { DrawerContent } from './BotomContent';
 import Profile from '../profile/Profile';
 import Payment from '../Payment/Payment';
+import 'react-native-gesture-handler';
+import
+MaterialCommunityIcons
+  from 'react-native-vector-icons/MaterialCommunityIcons';
+import {
+  createBottomTabNavigator
+} from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
-import Chat from '../chat/Chat';
-
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 
-export default UserDrawerList = () => {
-  
-    return (
-      <Drawer.Navigator 
-      drawerContent={(props) => <DrawerContent {...props} />}
-      initialRouteName="home">
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Profile" component={Profile} />   
-        <Drawer.Screen name="Payment" component={Payment} />  
-        <Drawer.Screen name="About us" component={Chat} />          
-        
+export default BottomList = () => {
 
-        </Drawer.Navigator>
-        // <Drawer.Navigator 
-        // drawerContent={props => {<DrawerContent {...props}/>}}
-        // initialRouteName="Home">{
-        //   <Drawer.Screen name="Home" component={Home} />
-        //   }
-        //   </Drawer.Navigator>
-    );
-  };
+  return (
+
+<NavigationContainer>
+  <Tab.Navigator>
+    <Tab.Screen
+      name="Home"
+      component={Home}
+      options={{
+        tabBarLabel: 'Home',
+        tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons
+            name="home"
+            color={color}
+            size={size}
+          />
+        ),
+      }} />
+      </Tab.Navigator>
+      </NavigationContainer>
+
+      
+  );
+};

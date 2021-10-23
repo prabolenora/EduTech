@@ -9,6 +9,7 @@ import ActivateCard from '../ActivateCard/ActivateCard';
 import Payment from '../Payment/Payment';
 
 import Chat from '../chat/Chat';
+import Trip from '../Trip/Trip';
 
 const Drawer = createDrawerNavigator();
 
@@ -23,6 +24,7 @@ export default UserDrawerList = () => {
         <Drawer.Screen name="Activate Card" component={ActivateCard} />  
         <Drawer.Screen name="Profile" component={Profile} />   
         <Drawer.Screen name="Payment" component={Payment} />  
+        <Drawer.Screen name="Trip" component={Trip} />  
         <Drawer.Screen name="About us" component={Chat} />   
 
         
