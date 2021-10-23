@@ -25,7 +25,7 @@ const TripComponent = props => {
                 onPress={() => props.navigation.navigate('Payment')}>
                 <Text h3
                   style={styles.topup2}>
-                  Top Up
+                  Helo akke
                 </Text>
               </TouchableOpacity>
               <Image
