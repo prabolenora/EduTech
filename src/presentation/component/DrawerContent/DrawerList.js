@@ -10,7 +10,6 @@ import Payment from '../Payment/Payment';
 import Timetable from '../TimeTable/TimeTable';
 import Trip from '../Trip/Trip';
 import Chat from '../chat/Chat';
-import QR from '../QR/QR';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,11 +30,5 @@ export default UserDrawerList = () => {
       
 
       </Drawer.Navigator>
-      // <Drawer.Navigator 
-      // drawerContent={props => {<DrawerContent {...props}/>}}
-      // initialRouteName="Home">{
-      //   <Drawer.Screen name="Home" component={Home} />
-      //   }
-      //   </Drawer.Navigator>
     );
   };
