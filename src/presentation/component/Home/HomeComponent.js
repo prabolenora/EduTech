@@ -1,12 +1,27 @@
 import React, { Component, useContext } from 'react';
-import { Button, Text, View, Icon, TouchableOpacity, Image } from 'react-native';
+import { Button,Alert, Text, View, TouchableOpacity, Image } from 'react-native';
 import { LoginContext } from '../../../Utils/LoginProvider';
 import styles from './Home.component.style';
-import Payment from '../Payment/Payment';
-import { Drawer, Card, Title, Paragraph } from 'react-native-paper';
+import { Card, Title, Paragraph } from 'react-native-paper';
 
-const HomeComponent = props => {
+const HomeComponent = (props) => {
   const { user } = useContext(LoginContext);
+  const selectOption = () => {
+
+    Alert.alert(
+        'SCAN...',
+        '',
+        [
+          {text: 'Scan your card...', onPress: () => props.captureImage('photo')},
+          
+        ],
+        { 
+          cancelable: true 
+        }
+      );        
+
+  }
+
 
   return (
     <View>
@@ -43,14 +58,27 @@ const HomeComponent = props => {
         </View>
 
         <View style={styles.cardBottomScan}>
-          <TouchableOpacity style={{ flex:1}}
-            activeOpacity={0.5}
-            onPress={() => props.navigation.navigate('QR')}>
-            <Image
-              source={require('./../../../assets/scan.png')}
-              style={styles.ScanImage}
-            />
-          </TouchableOpacity>
+
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={() => selectOption()}>
+              {
+                  props.filePath.uri != null ? (
+                      <>
+                      <Image
+                source={{uri: props.filePath.uri}}
+          style={styles.imgStyle}/>
+                      </>
+                  ): (
+                    <>
+                    <Image
+                source={require('./../../../assets/scan.png')}
+          style={styles.imgStyle}/>
+                    </>
+                  )
+              }
+              
+              </TouchableOpacity>
         </View>
 
 

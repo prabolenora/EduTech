@@ -27,11 +27,8 @@ export default UserDrawerList = () => {
         <Drawer.Screen name="Payment" component={Payment} />  
         <Drawer.Screen name="About us" component={Chat} />  
         <Drawer.Screen name="Timetable" component={Timetable} /> 
-        <Drawer.Screen name="Trip" component={Trip} />  
-        <Drawer.Screen name="QR" component={QR} />  
-
-
-        
+        <Drawer.Screen name="Trip" component={Trip} />   
+      
 
       </Drawer.Navigator>
       // <Drawer.Navigator 

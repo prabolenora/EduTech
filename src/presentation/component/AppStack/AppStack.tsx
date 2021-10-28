@@ -7,6 +7,7 @@ import LoadingScreen from '../Common/LoadingScreen';
 import Login from '../Login/Login';
 import DrawerList from '../DrawerContent/DrawerList';
 import Payment from '../Payment/Payment';
+import QR from '../QR/QR';
 
 const Stack = createStackNavigator();
 
@@ -30,7 +31,11 @@ export default function AppStack() {
               <Stack.Screen
                 name="Payment"
                 options={{ headerShown: true }}
-                component={Payment} /></>
+                component={Payment} />
+                <Stack.Screen
+                name="QR"
+                options={{ headerShown: true }}
+                component={QR} /></>
               
         ) : (
           <Stack.Screen

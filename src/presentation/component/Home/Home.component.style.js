@@ -121,6 +121,13 @@ export default StyleSheet.create({
     fontWeight:"bold",
     
   },
+  imgStyle: {
+    height: 120,
+    width:120,
+    borderRadius: 60,
+    alignSelf: "center"
+
+  },
   bottomnav: {
     position: 'absolute',
     bottom: 0,
