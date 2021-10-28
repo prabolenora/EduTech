@@ -16,9 +16,9 @@ export function DrawerContent(props) {
                 
                 {/* <DrawerItem label="Profile"> */}
                 <View style={styles.viewStyle}>
-                    <Image source={require('../../../../image/1693.jpeg')} style={styles.imgStyle}/>
+                    <Image source={require('../../../assets/ProPic.png')} style={styles.imgStyle}/>
                 </View>
-                <View>
+                <View style={styles.Name}>
                     <Text>{user?.email}</Text>
                 </View>
                 {/* </DrawerItem> */}

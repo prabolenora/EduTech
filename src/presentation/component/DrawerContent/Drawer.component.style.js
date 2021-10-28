@@ -14,6 +14,11 @@ export default StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center'
     },
+    Name:{
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight:"bold"
+    },
     imgStyle: {
       height: 120,
       width:120,

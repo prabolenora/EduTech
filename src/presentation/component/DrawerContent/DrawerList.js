@@ -20,11 +20,11 @@ export default UserDrawerList = () => {
       <Drawer.Navigator 
       drawerContent={(props) => <DrawerContent {...props} />}
       initialRouteName="home">
+        
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Activate Card" component={ActivateCard} />  
         <Drawer.Screen name="Profile" component={Profile} />   
-        <Drawer.Screen name="Payment" component={Payment} />  
-        <Drawer.Screen name="About us" component={Chat} />  
+        <Drawer.Screen name="Payment" component={Payment} />   
         <Drawer.Screen name="Timetable" component={Timetable} /> 
         <Drawer.Screen name="Trip" component={Trip} />   
       
