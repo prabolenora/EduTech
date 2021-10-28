@@ -35,10 +35,20 @@ export default StyleSheet.create({
 
   },
   Image: {
-    width: '30%',
-    height: '200%',
+    width: 150,
+    height: 100,
     marginBottom: 5,
     marginTop: 5,
+  },
+  ScanImage: {
+    width: '35%',
+    height: 150,
+   alignSelf: "center"
+  },
+  IconImage: {
+    width: 20,
+    height: 25,
+    alignSelf: "center"
   },
   cardBottom: {
     flexDirection: 'column',
@@ -50,12 +60,38 @@ export default StyleSheet.create({
     backgroundColor: '#bbdefb',
     borderRadius: 5,
   },
+  cardTour: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100%',
+    margin: 'auto',
+    marginBottom: 20,
+    marginTop: 20,
+    backgroundColor: '#F9F9F9',
+    borderRadius: 5,
+  },
+  cardBottom1: {
+    flexDirection: 'column',
+    width: '100%',
+    flexDirection: 'row',
+    margin: 'auto',
+    marginBottom: 20,
+    backgroundColor: '#bbdefb',
+    borderRadius: 5,
+  },
   cardBottomSame: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
   },
+  cardBottomScan: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+
   cardBottom2: {
     flexDirection: 'column',
     justifyContent: 'center',
@@ -75,31 +111,26 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     width: '100%',
   },
+
   topup:{
-    marginTop: 20,
+    marginTop: '50%',
+    marginStart: '8%',
+    fontSize:19,
     color: 'white',
-    marginRight:150,
-    fontSize:20,
+    alignSelf: "flex-start",
     fontWeight:"bold",
     
   },
-  topup2:{
-    marginTop: 20,
-    color: 'white',
-    marginLeft:10,
-    fontSize:20,
-    fontWeight:"bold",
-    
-  },
-  addButton: {
+  bottomnav: {
     position: 'absolute',
     bottom: 0,
-    padding: 10,
-    backgroundColor: '#EAFCFD',
+    padding: 7,
+    backgroundColor: '#F6F5F5',
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
-    height: '12%',
+    height: '11%',
+    marginBottom:'1.5%',
 
     alignItems: 'center',
     shadowColor: '#000',
@@ -139,6 +170,7 @@ export default StyleSheet.create({
   },
   buttontext: {
     color: 'grey',
+    alignSelf:'center',
       fontSize: 10,
   }
 });

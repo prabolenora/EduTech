@@ -15,71 +15,58 @@ const HomeComponent = props => {
         <Button onPress={() => props.signOut()} title="Log Out" />
 
         <View style={styles.cardBottom}>
-          <View><Card.Content >
-            <Title>Credit Balance</Title>
-            <Paragraph>2650.00 LKR</Paragraph>
-          </Card.Content>
-            <View style={styles.cardBottomSame}>
-              <TouchableOpacity
+          <View>
+            <Card.Content >
+              <Title>Credit Balance</Title>
+              <Paragraph>2650.00 LKR</Paragraph>
+            </Card.Content>
+            <View style={styles.cardBottom1}>
+              <TouchableOpacity style={{ flexDirection: 'row', }}
                 activeOpacity={0.5}
                 onPress={() => props.navigation.navigate('Payment')}>
                 <Text h3
-                  style={styles.topup2}>
+                  style={styles.topup}>
                   Top Up
                 </Text>
+                <Image
+                  source={require('./../../../assets/topup.png')}
+                  style={{ marginTop: '50%', marginStart: 8, width: '20%', height: '25%', }}
+                />
               </TouchableOpacity>
               <Image
                 source={require('./../../../assets/card.png')}
-                style={styles.Image}
+                style={{ alignSelf: "flex-end", marginBottom: 10, marginLeft: '10%', width: '40%', height: '100%', }}
               />
-              <TouchableOpacity
-                activeOpacity={0.5}
-                onPress={() => Drawer.navigate('Home')}>
-                {/* <FontAwesome5 name="home" size={24} color="#00509d" /> */}
+            </View>
 
-              </TouchableOpacity>
-            </View>
-            <Text h4 style={{ textAlign: 'center' }}>
-            </Text>
           </View>
         </View>
-        <View style={styles.cardBottom2}>
-          <View>
-            <View style={styles.cardBottomSame}>
-            </View>
-            <View style={styles.cardBottomSame}>
-            </View>
-          </View>
+
+        <View style={styles.cardBottomScan}>
+          <TouchableOpacity style={{ flex:1}}
+            activeOpacity={0.5}
+            onPress={() => props.navigation.navigate('QR')}>
+            <Image
+              source={require('./../../../assets/scan.png')}
+              style={styles.ScanImage}
+            />
+          </TouchableOpacity>
         </View>
-        <Text h2>
+
+
+        <Text h2 style={{ alignSelf: "flex-start" }}>
           Recent Tours
         </Text>
-        <View style={styles.cardBottom}>
+
+        <View style={styles.cardTour}>
           <View>
-            <View style={styles.cardBottomSame}>
-              {/* <Feather name="arrow-up" size={18} color="red" /> */}
-
-            </View>
-            <View style={styles.cardBottomSame}>
-              {/* <Feather name="arrow-up" size={18} color="red" /> */}
-
-            </View>
-
-          </View>
-        </View>
-        <View style={styles.cardBottom}>
-          <View>
-            <View style={styles.cardBottomSame}>
-              {/* <Feather name="arrow-up" size={18} color="red" /> */}
-
-            </View>
-            <View style={styles.cardBottomSame}>
-              {/* <Feather name="arrow-up" size={18} color="red" /> */}
-
-            </View>
-            <Text h4 style={{ textAlign: 'center' }}>
-              {/* {`Rs. ${expense?.toFixed(2)}`} */}
-            </Text>
+            <Card.Content>
+              <Title>Tour 1</Title>
+              <View style={{ flexDirection: "row" }}>
+              <Paragraph style={{ alignSelf: "flex-start" ,marginEnd:'25%'}}>Start : Colombo</Paragraph>
+              <Paragraph style={{ alignSelf: "flex-end" }}>End : Kadawatha</Paragraph>
+              </View>
+            </Card.Content>
           </View>
         </View>
       </View>
@@ -88,41 +75,44 @@ const HomeComponent = props => {
       </View>
 
 
-      <View style={styles.addButton}>
+      <View style={styles.bottomnav}>
         <TouchableOpacity
           activeOpacity={0.5}
-          onPress={() => navigation.navigate('Home')}>
-          {/* <FontAwesome5 name="home" size={24} color="#00509d" /> */}
+          onPress={() => props.navigation.navigate('Home')}>
+          <Image
+            source={require('./../../../assets/home.png')}
+            style={styles.IconImage}
+          />
           <Text style={styles.buttontext}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Timetables')}
+          onPress={() => props.navigation.navigate('Timetable')}
           activeOpacity={0.5}>
-          {/* <MaterialCommunityIcons
-            name="clipboard-flow-outline"
-            size={24}
-            color="#00509d"
-          /> */}
+          <Image
+            source={require('./../../../assets/tt.png')}
+            style={styles.IconImage}
+          />
           <Text style={styles.buttontext}> Timetables</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Trips')}
+          onPress={() => props.navigation.navigate('Trip')}
           activeOpacity={0.5}>
-          {/* <MaterialIcons name="add-circle" size={55} color="#3bdefb" /> */}
+          <Image
+            source={require('./../../../assets/trip.png')}
+            style={styles.IconImage}
+          />
           <Text style={styles.buttontext}> Trips</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Payments')}
+          onPress={() => props.navigation.navigate('Payment')}
           activeOpacity={0.5}>
-          {/* <Ionicons name="cash-outline" size={24} color="#00509d" /> */}
+          <Image
+            source={require('./../../../assets/plist.png')}
+            style={styles.IconImage}
+          />
           <Text style={styles.buttontext}> Payments</Text>
         </TouchableOpacity>
-        {/* <TouchableOpacity
-          activeOpacity={0.5}
-          onPress={() => navigation.navigate('Seemore')}>
-          {/* <MaterialIcons name="read-more" size={26} color="#00509d" />
-          <Text style={{ color: '#00509d', fontSize: 8 }}>More</Text>
-        </TouchableOpacity> */}
+
       </View>
 
     </View>
